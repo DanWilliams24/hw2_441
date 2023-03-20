@@ -18,13 +18,12 @@ html
 					td= person.points
 		
 
-		form(method="post",action=form_action)
-		p ID: 
-			input(type="number", name="id", placeholder=0)
-		p Name:
-			input(type="text", name="name", placeholder="None")
-		p Points: 
-			input(type="number", name="points", placeholder=0)
-		p
-			button(type="submit") create
-			button(type="submit") search
+		form(method="POST",action="", enctype="application/x-www-form-urlencoded")
+			p 
+				| ID: 
+				input(type="number", name="id", placeholder=0, value=0)
+				|		Name:
+				input(type="text", name="name", placeholder="None", value="")
+				|		Points: 
+				input(type="number", name="points", placeholder=0, value=0)
+			input(type='submit', value='Submit')
